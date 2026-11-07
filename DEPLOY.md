@@ -1,82 +1,148 @@
-# Deploying FRONTIER (no GitHub Actions needed)
+# Deploy your own copy of FRONTIER on GitHub
 
-Three ways to put the site online. **Option 1 is the easiest** and needs no GitHub account.
+This guide is for anyone who wants to run FRONTIER on **their own GitHub account**.
+Everything is done in the browser. You don't need to install anything.
+
+At the end, your site will be live at `https://YOUR-USERNAME.github.io/YOUR-REPO/`.
 
 ---
 
-## Option 1: Netlify drag-and-drop (about 10 minutes)
+## Step 1: Get your own copy of the code
 
-**1. Install Node.js**
-Go to https://nodejs.org, download the **LTS** version, and install it with the default settings.
+You need a free GitHub account (sign up at https://github.com).
 
-**2. Get the code**
-- Open https://github.com/Prarthana-sudeesh/FRONTIER-2.0
-- Click the green **Code** button → **Download ZIP**.
-- Unzip it somewhere easy, such as the Desktop. You get a folder like `FRONTIER-2.0-main`.
+**Way A: Import (recommended, gives you a fully independent copy)**
+1. Go to https://github.com/new/import
+2. In **"Your old repository's clone URL"** paste:
+   `https://github.com/Prarthana-sudeesh/FRONTIER-2.0.git`
+3. Choose a **Repository name**, e.g. `frontier`.
+4. Pick **Public**. GitHub Pages is free for public repos.
+5. Click **Begin import** and wait until it says the import is complete.
 
-**3. Open a terminal in that folder**
-- **Windows:** open the folder, click the address bar, type `cmd`, press Enter.
-- **Mac:** right-click the folder → **New Terminal at Folder**. If that option isn't there, open Terminal, type `cd ` (with a space), drag the folder into the window, and press Enter.
+**Way B: Upload the files yourself**
+1. Download the code as a ZIP (on the original repo: green **Code** button → **Download ZIP**) and unzip it.
+2. Go to https://github.com/new, name the repo (e.g. `frontier`), choose **Public**, click **Create repository**.
+3. Click **uploading an existing file**, drag in **everything inside** the unzipped folder, then click **Commit changes**.
 
-**4. Build the site**
+> Uploading by dragging often skips the hidden `.github` folder, so your copy may have **no workflow file**.
+> That's fine: Step 2 adds it.
 
-Run these one at a time:
+---
 
-```bash
-npm install
+## Step 2: Make sure your copy has the deploy workflow
+
+1. In your repo, check whether the file `.github/workflows/deploy.yml` exists.
+   **If it exists, skip to Step 3.**
+2. If it doesn't: click **Add file** → **Create new file**.
+3. In the file name box type exactly:
+   `.github/workflows/deploy.yml`
+   (typing the `/` creates the folders for you)
+4. Paste this into the big text box:
+
+```yaml
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
 ```
 
-```bash
-npm run build
-```
+5. Click **Commit changes** → **Commit changes**.
 
-When it says `✓ built`, there is a new folder called **`dist`**. That folder is the whole website.
-
-**5. Publish it**
-- Go to https://app.netlify.com/drop and sign up (free) or log in.
-- Drag the **`dist`** folder onto the page.
-- After a few seconds you get a live link like `https://random-name-123.netlify.app`.
-
-**6. Optional: rename the link**
-In Netlify: **Site configuration** → **Change site name**, e.g. `frontier-research`.
-
-**To update later:** download the code again, run `npm run build` again, then open the site in Netlify → **Deploys** tab and drag the new `dist` folder in.
+> If your default branch is called `master` instead of `main`, change `[main]` to `[master]`.
 
 ---
 
-## Option 2: Vercel, connected to your own GitHub (auto-updates)
+## Step 3: Turn on GitHub Pages
 
-1. Sign in to GitHub, open https://github.com/Prarthana-sudeesh/FRONTIER-2.0 and click **Fork** → **Create fork**.
-2. Go to https://vercel.com and sign up with GitHub.
-3. Click **Add New…** → **Project**, find your fork and click **Import**.
-4. Leave every setting as it is (the repo already includes them) and click **Deploy**.
-5. About a minute later you get a link like `https://frontier-2-0.vercel.app`. Every push to your fork redeploys it automatically.
+1. In **your repo** (not your profile), click the **⚙️ Settings** tab.
+   On a narrow screen it may be hidden under the **⋯** menu.
+2. In the left menu click **Pages**.
+3. Under **Build and deployment** → **Source**, choose **GitHub Actions**.
 
-Netlify works the same way: **Add new site** → **Import an existing project** → pick your fork → **Deploy**.
+> If you only see "Verified domains", you're in your *account* settings.
+> Go back to the repo page and use its Settings tab instead.
 
 ---
 
-## Option 3: GitHub Pages on your own fork, without the workflow
+## Step 4: Publish
 
-1. Fork the repo (Option 2, step 1). Then follow Option 1, steps 1 to 4, but download the ZIP from **your fork**.
-2. Publish the built files to a `gh-pages` branch. This needs Git installed, from https://git-scm.com. Replace `YOUR-USERNAME` with your GitHub username:
+1. Click the **Actions** tab of your repo.
+   - If GitHub asks, click **"I understand my workflows, go ahead and enable them"**.
+2. Click **Deploy website** in the left list → **Run workflow** → **Run workflow**.
+3. Wait about a minute until both steps, **build** and **deploy**, show a green ✓.
+4. Your link appears on the finished run under **deploy**. It looks like:
+   `https://YOUR-USERNAME.github.io/YOUR-REPO/`
 
-   ```bash
-   npx gh-pages -d dist -r https://github.com/YOUR-USERNAME/FRONTIER-2.0.git
-   ```
-
-   Git may ask you to sign in to GitHub; that's expected.
-3. In your fork on GitHub: **Settings** → **Pages** → **Source: Deploy from a branch** → Branch **gh-pages**, folder **/ (root)** → **Save**.
-4. After about a minute the site is at `https://YOUR-USERNAME.github.io/FRONTIER-2.0/`
+From now on, every change you commit to `main` republishes the site automatically.
 
 ---
 
 ## Using real data instead of the demo
 
-Before building, replace `public/data/forecasts.json` with the file produced by the
-FRONTIER model (`pipeline/frontier_model.py` or `b2/export_web.py` in the FRONTIER repo).
+The site ships with clearly labelled **demo data**. To show real forecasts:
+
+1. Open `public/data/forecasts.json` in your repo.
+2. Click the **pencil** icon to edit it, or **Add file** → **Upload files** to upload a replacement
+   with the same name into `public/data/`.
+3. Commit. The site republishes by itself.
+
+The real file is produced by the FRONTIER model (`pipeline/frontier_model.py` or
+`b2/export_web.py` in the FRONTIER model repo).
+
+---
 
 ## If something goes wrong
 
-- **`npm` is "not recognized":** restart the computer after installing Node.js, then try again.
-- **Blank page:** make sure you uploaded the **`dist`** folder, not the whole project folder.
+| Problem | Fix |
+|---|---|
+| **deploy** step fails, build is green | Pages isn't on yet: do Step 3, then re-run (open the run → **Re-run all jobs**). |
+| No **Actions** tab or no **Run workflow** button | Actions are off: **Settings** → **Actions** → **General** → **Allow all actions**. Check Step 2's file name is exactly `.github/workflows/deploy.yml`. |
+| **build** step fails | Make sure `package.json` and `package-lock.json` are in the top level of the repo, not inside a sub-folder. |
+| Site shows a blank page or 404 | Wait a minute and hard-refresh (Ctrl+Shift+R / Cmd+Shift+R). Check the URL ends with `/YOUR-REPO/`. |
+| Private repo, Pages not offered | Free accounts need the repo to be **Public** for Pages. |
+
+---
+
+## No-GitHub alternative
+
+Prefer not to use GitHub? Use Netlify instead:
+
+1. On a computer with Node.js installed (https://nodejs.org), download and unzip the code.
+2. Open a terminal in that folder and run `npm install`, then `npm run build`.
+3. Drag the new **`dist`** folder onto https://app.netlify.com/drop to get a live link.
