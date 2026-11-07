@@ -1,0 +1,1108 @@
+{
+ "meta": {
+  "demo": true,
+  "generated": "2026-11-07",
+  "data_end": 2025,
+  "horizon": "2026-2028",
+  "source": "Illustrative demo data (run pipeline/frontier_model.py for real forecasts)",
+  "n_concepts": 85,
+  "n_links": 0
+ },
+ "fields": [
+  {
+   "id": "medicine",
+   "name": "Medicine & Biology",
+   "color": "#ff6b8b"
+  },
+  {
+   "id": "quant",
+   "name": "Quantitative Finance",
+   "color": "#ffc04d"
+  },
+  {
+   "id": "ml",
+   "name": "Machine Learning",
+   "color": "#5cc8ff"
+  },
+  {
+   "id": "physics",
+   "name": "Physics & Other",
+   "color": "#a98bff"
+  }
+ ],
+ "concepts": [
+  {
+   "id": 0,
+   "name": "single-cell rna sequencing",
+   "field": "medicine",
+   "first_year": 2005,
+   "papers": 847
+  },
+  {
+   "id": 1,
+   "name": "spatial transcriptomics",
+   "field": "medicine",
+   "first_year": 1996,
+   "papers": 65
+  },
+  {
+   "id": 2,
+   "name": "tumour microenvironment",
+   "field": "medicine",
+   "first_year": 2006,
+   "papers": 1113
+  },
+  {
+   "id": 3,
+   "name": "gut microbiome",
+   "field": "medicine",
+   "first_year": 2001,
+   "papers": 76
+  },
+  {
+   "id": 4,
+   "name": "sepsis",
+   "field": "medicine",
+   "first_year": 1997,
+   "papers": 110
+  },
+  {
+   "id": 5,
+   "name": "organoid",
+   "field": "medicine",
+   "first_year": 1996,
+   "papers": 481
+  },
+  {
+   "id": 6,
+   "name": "crispr screening",
+   "field": "medicine",
+   "first_year": 2002,
+   "papers": 438
+  },
+  {
+   "id": 7,
+   "name": "antimicrobial resistance",
+   "field": "medicine",
+   "first_year": 1996,
+   "papers": 329
+  },
+  {
+   "id": 8,
+   "name": "car-t therapy",
+   "field": "medicine",
+   "first_year": 2002,
+   "papers": 185
+  },
+  {
+   "id": 9,
+   "name": "polygenic risk score",
+   "field": "medicine",
+   "first_year": 1998,
+   "papers": 346
+  },
+  {
+   "id": 10,
+   "name": "digital pathology",
+   "field": "medicine",
+   "first_year": 2016,
+   "papers": 83
+  },
+  {
+   "id": 11,
+   "name": "wearable ecg",
+   "field": "medicine",
+   "first_year": 2015,
+   "papers": 158
+  },
+  {
+   "id": 12,
+   "name": "alzheimer biomarker",
+   "field": "medicine",
+   "first_year": 2017,
+   "papers": 65
+  },
+  {
+   "id": 13,
+   "name": "mrna vaccine",
+   "field": "medicine",
+   "first_year": 2008,
+   "papers": 602
+  },
+  {
+   "id": 14,
+   "name": "epigenetic clock",
+   "field": "medicine",
+   "first_year": 2009,
+   "papers": 203
+  },
+  {
+   "id": 15,
+   "name": "circadian rhythm",
+   "field": "medicine",
+   "first_year": 2000,
+   "papers": 406
+  },
+  {
+   "id": 16,
+   "name": "drug repurposing",
+   "field": "medicine",
+   "first_year": 2013,
+   "papers": 146
+  },
+  {
+   "id": 17,
+   "name": "clinical trial emulation",
+   "field": "medicine",
+   "first_year": 2005,
+   "papers": 444
+  },
+  {
+   "id": 18,
+   "name": "electronic health record",
+   "field": "medicine",
+   "first_year": 1997,
+   "papers": 98
+  },
+  {
+   "id": 19,
+   "name": "retinal imaging",
+   "field": "medicine",
+   "first_year": 2019,
+   "papers": 11
+  },
+  {
+   "id": 20,
+   "name": "cell-free dna",
+   "field": "medicine",
+   "first_year": 1997,
+   "papers": 703
+  },
+  {
+   "id": 21,
+   "name": "phage therapy",
+   "field": "medicine",
+   "first_year": 2021,
+   "papers": 105
+  },
+  {
+   "id": 22,
+   "name": "glioblastoma",
+   "field": "medicine",
+   "first_year": 2014,
+   "papers": 263
+  },
+  {
+   "id": 23,
+   "name": "long covid",
+   "field": "medicine",
+   "first_year": 1997,
+   "papers": 240
+  },
+  {
+   "id": 24,
+   "name": "insulin resistance",
+   "field": "medicine",
+   "first_year": 1996,
+   "papers": 453
+  },
+  {
+   "id": 25,
+   "name": "immune checkpoint",
+   "field": "medicine",
+   "first_year": 2013,
+   "papers": 157
+  },
+  {
+   "id": 26,
+   "name": "synthetic lethality",
+   "field": "medicine",
+   "first_year": 2016,
+   "papers": 152
+  },
+  {
+   "id": 27,
+   "name": "base editing",
+   "field": "medicine",
+   "first_year": 2010,
+   "papers": 126
+  },
+  {
+   "id": 28,
+   "name": "sleep eeg",
+   "field": "medicine",
+   "first_year": 2007,
+   "papers": 970
+  },
+  {
+   "id": 29,
+   "name": "gene regulatory network",
+   "field": "medicine",
+   "first_year": 2000,
+   "papers": 227
+  },
+  {
+   "id": 30,
+   "name": "pharmacokinetic model",
+   "field": "medicine",
+   "first_year": 1999,
+   "papers": 150
+  },
+  {
+   "id": 31,
+   "name": "protein structure prediction",
+   "field": "medicine",
+   "first_year": 2006,
+   "papers": 426
+  },
+  {
+   "id": 32,
+   "name": "optimal execution",
+   "field": "quant",
+   "first_year": 2002,
+   "papers": 140
+  },
+  {
+   "id": 33,
+   "name": "limit order book",
+   "field": "quant",
+   "first_year": 2002,
+   "papers": 505
+  },
+  {
+   "id": 34,
+   "name": "market impact",
+   "field": "quant",
+   "first_year": 2004,
+   "papers": 72
+  },
+  {
+   "id": 35,
+   "name": "volatility surface",
+   "field": "quant",
+   "first_year": 2006,
+   "papers": 346
+  },
+  {
+   "id": 36,
+   "name": "rough volatility",
+   "field": "quant",
+   "first_year": 1999,
+   "papers": 496
+  },
+  {
+   "id": 37,
+   "name": "statistical arbitrage",
+   "field": "quant",
+   "first_year": 2014,
+   "papers": 678
+  },
+  {
+   "id": 38,
+   "name": "factor model",
+   "field": "quant",
+   "first_year": 2009,
+   "papers": 205
+  },
+  {
+   "id": 39,
+   "name": "risk parity",
+   "field": "quant",
+   "first_year": 1998,
+   "papers": 257
+  },
+  {
+   "id": 40,
+   "name": "portfolio optimisation",
+   "field": "quant",
+   "first_year": 2001,
+   "papers": 116
+  },
+  {
+   "id": 41,
+   "name": "deep hedging",
+   "field": "quant",
+   "first_year": 2000,
+   "papers": 59
+  },
+  {
+   "id": 42,
+   "name": "regime switching",
+   "field": "quant",
+   "first_year": 1998,
+   "papers": 102
+  },
+  {
+   "id": 43,
+   "name": "mean-field game",
+   "field": "quant",
+   "first_year": 1995,
+   "papers": 117
+  },
+  {
+   "id": 44,
+   "name": "high-frequency trading",
+   "field": "quant",
+   "first_year": 2007,
+   "papers": 130
+  },
+  {
+   "id": 45,
+   "name": "credit default swap",
+   "field": "quant",
+   "first_year": 2006,
+   "papers": 365
+  },
+  {
+   "id": 46,
+   "name": "systemic risk",
+   "field": "quant",
+   "first_year": 1998,
+   "papers": 244
+  },
+  {
+   "id": 47,
+   "name": "liquidity risk",
+   "field": "quant",
+   "first_year": 1997,
+   "papers": 551
+  },
+  {
+   "id": 48,
+   "name": "alternative data",
+   "field": "quant",
+   "first_year": 2017,
+   "papers": 1183
+  },
+  {
+   "id": 49,
+   "name": "news sentiment signal",
+   "field": "quant",
+   "first_year": 1999,
+   "papers": 477
+  },
+  {
+   "id": 50,
+   "name": "cryptocurrency market",
+   "field": "quant",
+   "first_year": 2015,
+   "papers": 1713
+  },
+  {
+   "id": 51,
+   "name": "implied volatility",
+   "field": "quant",
+   "first_year": 2003,
+   "papers": 368
+  },
+  {
+   "id": 52,
+   "name": "kelly criterion",
+   "field": "quant",
+   "first_year": 2006,
+   "papers": 664
+  },
+  {
+   "id": 53,
+   "name": "transaction cost",
+   "field": "quant",
+   "first_year": 2019,
+   "papers": 273
+  },
+  {
+   "id": 54,
+   "name": "momentum factor",
+   "field": "quant",
+   "first_year": 2014,
+   "papers": 1789
+  },
+  {
+   "id": 55,
+   "name": "esg score",
+   "field": "quant",
+   "first_year": 2002,
+   "papers": 108
+  },
+  {
+   "id": 56,
+   "name": "central bank communication",
+   "field": "quant",
+   "first_year": 2018,
+   "papers": 170
+  },
+  {
+   "id": 57,
+   "name": "transformer",
+   "field": "ml",
+   "first_year": 2017,
+   "papers": 346
+  },
+  {
+   "id": 58,
+   "name": "graph neural network",
+   "field": "ml",
+   "first_year": 2020,
+   "papers": 817
+  },
+  {
+   "id": 59,
+   "name": "diffusion model",
+   "field": "ml",
+   "first_year": 2002,
+   "papers": 84
+  },
+  {
+   "id": 60,
+   "name": "causal inference",
+   "field": "ml",
+   "first_year": 2005,
+   "papers": 80
+  },
+  {
+   "id": 61,
+   "name": "reinforcement learning",
+   "field": "ml",
+   "first_year": 2014,
+   "papers": 742
+  },
+  {
+   "id": 62,
+   "name": "conformal prediction",
+   "field": "ml",
+   "first_year": 2015,
+   "papers": 137
+  },
+  {
+   "id": 63,
+   "name": "contrastive learning",
+   "field": "ml",
+   "first_year": 2021,
+   "papers": 4222
+  },
+  {
+   "id": 64,
+   "name": "large language model",
+   "field": "ml",
+   "first_year": 2020,
+   "papers": 406
+  },
+  {
+   "id": 65,
+   "name": "gaussian process",
+   "field": "ml",
+   "first_year": 2000,
+   "papers": 204
+  },
+  {
+   "id": 66,
+   "name": "optimal transport",
+   "field": "ml",
+   "first_year": 1997,
+   "papers": 206
+  },
+  {
+   "id": 67,
+   "name": "neural ode",
+   "field": "ml",
+   "first_year": 1997,
+   "papers": 410
+  },
+  {
+   "id": 68,
+   "name": "signature method",
+   "field": "ml",
+   "first_year": 1999,
+   "papers": 231
+  },
+  {
+   "id": 69,
+   "name": "topological data analysis",
+   "field": "ml",
+   "first_year": 2014,
+   "papers": 392
+  },
+  {
+   "id": 70,
+   "name": "normalizing flow",
+   "field": "ml",
+   "first_year": 2012,
+   "papers": 291
+  },
+  {
+   "id": 71,
+   "name": "federated learning",
+   "field": "ml",
+   "first_year": 2020,
+   "papers": 501
+  },
+  {
+   "id": 72,
+   "name": "survival analysis",
+   "field": "ml",
+   "first_year": 2008,
+   "papers": 111
+  },
+  {
+   "id": 73,
+   "name": "bayesian optimisation",
+   "field": "ml",
+   "first_year": 2019,
+   "papers": 323
+  },
+  {
+   "id": 74,
+   "name": "anomaly detection",
+   "field": "ml",
+   "first_year": 2008,
+   "papers": 1049
+  },
+  {
+   "id": 75,
+   "name": "random matrix theory",
+   "field": "physics",
+   "first_year": 2011,
+   "papers": 60
+  },
+  {
+   "id": 76,
+   "name": "percolation",
+   "field": "physics",
+   "first_year": 2011,
+   "papers": 138
+  },
+  {
+   "id": 77,
+   "name": "stochastic thermodynamics",
+   "field": "physics",
+   "first_year": 2011,
+   "papers": 71
+  },
+  {
+   "id": 78,
+   "name": "kuramoto model",
+   "field": "physics",
+   "first_year": 2000,
+   "papers": 571
+  },
+  {
+   "id": 79,
+   "name": "spin glass",
+   "field": "physics",
+   "first_year": 1999,
+   "papers": 103
+  },
+  {
+   "id": 80,
+   "name": "hawkes process",
+   "field": "physics",
+   "first_year": 2018,
+   "papers": 492
+  },
+  {
+   "id": 81,
+   "name": "renormalization group",
+   "field": "physics",
+   "first_year": 2010,
+   "papers": 441
+  },
+  {
+   "id": 82,
+   "name": "active matter",
+   "field": "physics",
+   "first_year": 2012,
+   "papers": 250
+  },
+  {
+   "id": 83,
+   "name": "entropy production",
+   "field": "physics",
+   "first_year": 1997,
+   "papers": 215
+  },
+  {
+   "id": 84,
+   "name": "agent-based model",
+   "field": "physics",
+   "first_year": 2011,
+   "papers": 331
+  }
+ ],
+ "gaps": [
+  {
+   "a": 4,
+   "b": 42,
+   "score": 0.926,
+   "cn": 20,
+   "adamic_adar": 5.691,
+   "pref_attach": 14337,
+   "growth": 28,
+   "bridges": [
+    18,
+    72,
+    80
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"sepsis\" and \"regime switching\", yet they share 20 neighbouring concepts (e.g. electronic health record, survival analysis, hawkes process). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 2,
+   "b": 43,
+   "score": 0.9142,
+   "cn": 18,
+   "adamic_adar": 5.357,
+   "pref_attach": 19974,
+   "growth": 29,
+   "bridges": [
+    84,
+    25,
+    82
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"tumour microenvironment\" and \"mean-field game\", yet they share 18 neighbouring concepts (e.g. agent-based model, immune checkpoint, active matter). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 5,
+   "b": 73,
+   "score": 0.9086,
+   "cn": 48,
+   "adamic_adar": 10.257,
+   "pref_attach": 11584,
+   "growth": 16,
+   "bridges": [
+    6,
+    65,
+    16
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"organoid\" and \"bayesian optimisation\", yet they share 48 neighbouring concepts (e.g. crispr screening, gaussian process, drug repurposing). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 20,
+   "b": 69,
+   "score": 0.9078,
+   "cn": 29,
+   "adamic_adar": 5.8,
+   "pref_attach": 19990,
+   "growth": 32,
+   "bridges": [
+    0,
+    74,
+    22
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"cell-free dna\" and \"topological data analysis\", yet they share 29 neighbouring concepts (e.g. single-cell rna sequencing, anomaly detection, glioblastoma). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 35,
+   "b": 67,
+   "score": 0.8855,
+   "cn": 27,
+   "adamic_adar": 6.954,
+   "pref_attach": 59731,
+   "growth": 48,
+   "bridges": [
+    51,
+    36,
+    65
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"volatility surface\" and \"neural ode\", yet they share 27 neighbouring concepts (e.g. implied volatility, rough volatility, gaussian process). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 52,
+   "b": 71,
+   "score": 0.8812,
+   "cn": 10,
+   "adamic_adar": 2.176,
+   "pref_attach": 4206,
+   "growth": 43,
+   "bridges": [
+    40,
+    48,
+    73
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"kelly criterion\" and \"federated learning\", yet they share 10 neighbouring concepts (e.g. portfolio optimisation, alternative data, bayesian optimisation). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 40,
+   "b": 16,
+   "score": 0.8499,
+   "cn": 6,
+   "adamic_adar": 1.365,
+   "pref_attach": 74491,
+   "growth": 29,
+   "bridges": [
+    73,
+    39,
+    26
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"portfolio optimisation\" and \"drug repurposing\", yet they share 6 neighbouring concepts (e.g. bayesian optimisation, risk parity, synthetic lethality). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 33,
+   "b": 59,
+   "score": 0.7886,
+   "cn": 26,
+   "adamic_adar": 5.016,
+   "pref_attach": 49966,
+   "growth": 4,
+   "bridges": [
+    44,
+    70,
+    34
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"limit order book\" and \"diffusion model\", yet they share 26 neighbouring concepts (e.g. high-frequency trading, normalizing flow, market impact). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 55,
+   "b": 64,
+   "score": 0.7209,
+   "cn": 22,
+   "adamic_adar": 4.798,
+   "pref_attach": 25796,
+   "growth": 20,
+   "bridges": [
+    48,
+    49,
+    57
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"esg score\" and \"large language model\", yet they share 22 neighbouring concepts (e.g. alternative data, news sentiment signal, transformer). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 37,
+   "b": 69,
+   "score": 0.694,
+   "cn": 24,
+   "adamic_adar": 6.041,
+   "pref_attach": 10426,
+   "growth": 10,
+   "bridges": [
+    38,
+    54,
+    75
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"statistical arbitrage\" and \"topological data analysis\", yet they share 24 neighbouring concepts (e.g. factor model, momentum factor, random matrix theory). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 46,
+   "b": 58,
+   "score": 0.684,
+   "cn": 7,
+   "adamic_adar": 1.637,
+   "pref_attach": 69821,
+   "growth": 42,
+   "bridges": [
+    76,
+    45,
+    47
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"systemic risk\" and \"graph neural network\", yet they share 7 neighbouring concepts (e.g. percolation, credit default swap, liquidity risk). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 36,
+   "b": 28,
+   "score": 0.6827,
+   "cn": 11,
+   "adamic_adar": 3.215,
+   "pref_attach": 12976,
+   "growth": 41,
+   "bridges": [
+    68,
+    80,
+    15
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"rough volatility\" and \"sleep eeg\", yet they share 11 neighbouring concepts (e.g. signature method, hawkes process, circadian rhythm). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 34,
+   "b": 82,
+   "score": 0.6781,
+   "cn": 20,
+   "adamic_adar": 6.321,
+   "pref_attach": 15733,
+   "growth": 8,
+   "bridges": [
+    84,
+    32,
+    43
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"market impact\" and \"active matter\", yet they share 20 neighbouring concepts (e.g. agent-based model, optimal execution, mean-field game). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 56,
+   "b": 63,
+   "score": 0.6626,
+   "cn": 14,
+   "adamic_adar": 4.127,
+   "pref_attach": 35896,
+   "growth": 28,
+   "bridges": [
+    49,
+    57,
+    42
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"central bank communication\" and \"contrastive learning\", yet they share 14 neighbouring concepts (e.g. news sentiment signal, transformer, regime switching). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 38,
+   "b": 0,
+   "score": 0.6031,
+   "cn": 20,
+   "adamic_adar": 3.787,
+   "pref_attach": 17948,
+   "growth": 32,
+   "bridges": [
+    75,
+    29,
+    1
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"factor model\" and \"single-cell rna sequencing\", yet they share 20 neighbouring concepts (e.g. random matrix theory, gene regulatory network, spatial transcriptomics). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 21,
+   "b": 61,
+   "score": 0.5924,
+   "cn": 39,
+   "adamic_adar": 11.806,
+   "pref_attach": 36025,
+   "growth": 38,
+   "bridges": [
+    7,
+    84,
+    30
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"phage therapy\" and \"reinforcement learning\", yet they share 39 neighbouring concepts (e.g. antimicrobial resistance, agent-based model, pharmacokinetic model). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 62,
+   "b": 10,
+   "score": 0.5802,
+   "cn": 23,
+   "adamic_adar": 5.597,
+   "pref_attach": 71898,
+   "growth": 54,
+   "bridges": [
+    74,
+    19,
+    72
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"conformal prediction\" and \"digital pathology\", yet they share 23 neighbouring concepts (e.g. anomaly detection, retinal imaging, survival analysis). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 47,
+   "b": 66,
+   "score": 0.5741,
+   "cn": 37,
+   "adamic_adar": 10.288,
+   "pref_attach": 13725,
+   "growth": 20,
+   "bridges": [
+    40,
+    39,
+    53
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"liquidity risk\" and \"optimal transport\", yet they share 37 neighbouring concepts (e.g. portfolio optimisation, risk parity, transaction cost). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 14,
+   "b": 80,
+   "score": 0.5319,
+   "cn": 36,
+   "adamic_adar": 9.039,
+   "pref_attach": 34460,
+   "growth": 47,
+   "bridges": [
+    72,
+    15,
+    65
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"epigenetic clock\" and \"hawkes process\", yet they share 36 neighbouring concepts (e.g. survival analysis, circadian rhythm, gaussian process). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 17,
+   "b": 64,
+   "score": 0.5309,
+   "cn": 20,
+   "adamic_adar": 4.052,
+   "pref_attach": 58560,
+   "growth": 35,
+   "bridges": [
+    18,
+    60,
+    23
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"clinical trial emulation\" and \"large language model\", yet they share 20 neighbouring concepts (e.g. electronic health record, causal inference, long covid). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 27,
+   "b": 59,
+   "score": 0.4316,
+   "cn": 31,
+   "adamic_adar": 7.052,
+   "pref_attach": 27656,
+   "growth": 25,
+   "bridges": [
+    31,
+    6,
+    70
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"base editing\" and \"diffusion model\", yet they share 31 neighbouring concepts (e.g. protein structure prediction, crispr screening, normalizing flow). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 3,
+   "b": 68,
+   "score": 0.4048,
+   "cn": 13,
+   "adamic_adar": 3.054,
+   "pref_attach": 43416,
+   "growth": 7,
+   "bridges": [
+    24,
+    15,
+    67
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"gut microbiome\" and \"signature method\", yet they share 13 neighbouring concepts (e.g. insulin resistance, circadian rhythm, neural ode). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 41,
+   "b": 62,
+   "score": 0.3986,
+   "cn": 15,
+   "adamic_adar": 3.827,
+   "pref_attach": 69473,
+   "growth": 39,
+   "bridges": [
+    51,
+    61,
+    53
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"deep hedging\" and \"conformal prediction\", yet they share 15 neighbouring concepts (e.g. implied volatility, reinforcement learning, transaction cost). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 50,
+   "b": 78,
+   "score": 0.3869,
+   "cn": 9,
+   "adamic_adar": 2.627,
+   "pref_attach": 26031,
+   "growth": 30,
+   "bridges": [
+    44,
+    80,
+    49
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"cryptocurrency market\" and \"kuramoto model\", yet they share 9 neighbouring concepts (e.g. high-frequency trading, hawkes process, news sentiment signal). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 11,
+   "b": 42,
+   "score": 0.3582,
+   "cn": 23,
+   "adamic_adar": 6.142,
+   "pref_attach": 7663,
+   "growth": 36,
+   "bridges": [
+    74,
+    80,
+    15
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"wearable ecg\" and \"regime switching\", yet they share 23 neighbouring concepts (e.g. anomaly detection, hawkes process, circadian rhythm). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 25,
+   "b": 79,
+   "score": 0.3404,
+   "cn": 37,
+   "adamic_adar": 7.503,
+   "pref_attach": 89534,
+   "growth": 56,
+   "bridges": [
+    31,
+    81,
+    8
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"immune checkpoint\" and \"spin glass\", yet they share 37 neighbouring concepts (e.g. protein structure prediction, renormalization group, car-t therapy). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 7,
+   "b": 77,
+   "score": 0.2366,
+   "cn": 15,
+   "adamic_adar": 4.673,
+   "pref_attach": 86339,
+   "growth": 45,
+   "bridges": [
+    83,
+    21,
+    84
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"antimicrobial resistance\" and \"stochastic thermodynamics\", yet they share 15 neighbouring concepts (e.g. entropy production, phage therapy, agent-based model). Replace with real model output before drawing conclusions."
+  },
+  {
+   "a": 9,
+   "b": 75,
+   "score": 0.2233,
+   "cn": 48,
+   "adamic_adar": 10.675,
+   "pref_attach": 18036,
+   "growth": 60,
+   "bridges": [
+    29,
+    38,
+    60
+   ],
+   "brief": "Demo example. In this illustrative dataset no abstract mentions both \"polygenic risk score\" and \"random matrix theory\", yet they share 48 neighbouring concepts (e.g. gene regulatory network, factor model, causal inference). Replace with real model output before drawing conclusions."
+  }
+ ],
+ "backtest": {
+  "train": "features <= 2013, labels 2014-2016",
+  "test": "features <= 2016, labels 2017-2025",
+  "model": "demo",
+  "candidates": 1840000,
+  "evaluated": 1840000,
+  "positives": 5520,
+  "base_rate": 0.003,
+  "k": [
+   10,
+   50,
+   100,
+   500,
+   1000
+  ],
+  "precision": {
+   "model": [
+    0.6,
+    0.42,
+    0.37,
+    0.21,
+    0.15
+   ],
+   "popularity": [
+    0.2,
+    0.14,
+    0.12,
+    0.08,
+    0.06
+   ],
+   "random": [
+    0.0,
+    0.0,
+    0.01,
+    0.004,
+    0.003
+   ]
+  },
+  "auc": {
+   "model": 0.89,
+   "popularity": 0.81
+  },
+  "importance": {
+   "resource_alloc": 0.24,
+   "adamic_adar": 0.19,
+   "cn": 0.14,
+   "growth_max": 0.12,
+   "jaccard": 0.09,
+   "pref_attach": 0.07,
+   "growth_min": 0.06,
+   "deg_min": 0.04,
+   "age_min": 0.02,
+   "deg_max": 0.02,
+   "age_max": 0.01
+  }
+ }
+}
