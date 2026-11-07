@@ -3,7 +3,11 @@
 A website that shows which research concepts are likely to be studied together
 for the first time, so PhD students can spot open research gaps early.
 
-- **Galaxy**: 3D map of research concepts (2D fallback when WebGL is missing).
+- **Explore**: four realistic planets, one per field. Click one to dive into an ocean
+  of floating islands, one per sub-topic. Scroll sideways (or use ← →, swipe, or the
+  arrows) to sail between islands; scroll down to unroll an island's scroll of research
+  gaps, scroll up to roll it away, and keep scrolling up to rise back to space.
+  Browsers without WebGL 2 get a 2D version of both views.
 - **Research gaps**: search, filter, sort, CSV export, and links to check arXiv,
   Google Scholar and PubMed before starting work.
 - **Backtest**: how well the forecasts did on past years vs. simple baselines.
@@ -18,7 +22,9 @@ npm run build    # type-check + production build into dist/
 ```
 
 ## Data
-The site reads `public/data/forecasts.json`. It currently holds clearly labelled
+The site reads `public/data/forecasts.json`. Each concept can carry a `sub` field
+(for example an arXiv category name); each distinct `sub` becomes an island. Without
+it, islands are grouped by when concepts first appeared. It currently holds clearly labelled
 **demo data** (a banner says so on the site).
 
 Real forecasts come from the model in the FRONTIER repo

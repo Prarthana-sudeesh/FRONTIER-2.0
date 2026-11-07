@@ -1,38 +1,46 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { buildGapViews, layout, loadDataset, readStore, writeStore } from "./data";
+import { buildGapViews, loadDataset, readStore, writeStore } from "./data";
 import type { Dataset, GapView } from "./types";
 import Leaderboard, { type Board } from "./components/Leaderboard";
 import GapModal from "./components/GapModal";
-import GalaxyView from "./components/GalaxyView";
+import Explore from "./components/Explore";
+import { LogoMark, Wordmark } from "./components/Logo";
 import GapsView from "./components/GapsView";
 import BacktestView from "./components/BacktestView";
 import MethodView from "./components/MethodView";
 
 const VIEWS = [
-  { id: "galaxy", label: "Galaxy" },
+  { id: "explore", label: "Explore" },
   { id: "gaps", label: "Research gaps" },
   { id: "backtest", label: "Backtest" },
   { id: "method", label: "How it works" },
 ] as const;
 type View = (typeof VIEWS)[number]["id"];
 
-const viewFromHash = (): View => {
-  const h = window.location.hash.replace(/^#\/?/, "");
-  return (VIEWS.find((v) => v.id === h)?.id ?? "galaxy") as View;
+interface Route {
+  view: View;
+  field: string | null;
+}
+
+/** #explore, #explore/<field>, #gaps, #backtest, #method (old #galaxy links still work). */
+const parseHash = (): Route => {
+  const [head, field] = decodeURIComponent(window.location.hash.replace(/^#\/?/, "")).split("/");
+  const view = (VIEWS.find((v) => v.id === head)?.id ?? "explore") as View;
+  return { view, field: view === "explore" && field ? field : null };
 };
 
 export default function App() {
   const [data, setData] = useState<Dataset | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [view, setView] = useState<View>(viewFromHash);
+  const [route, setRoute] = useState<Route>(parseHash);
+  const view = route.view;
   const [lbOpen, setLbOpen] = useState<boolean>(() => {
     const saved = readStore("frontier.leaderboard");
     return saved == null ? window.innerWidth >= 1100 : saved === "open";
   });
   const [board, setBoard] = useState<Board>(() => (readStore("frontier.board") === "quant" ? "quant" : "medicine"));
   const [openGap, setOpenGap] = useState<GapView | null>(null);
-  const [focusGap, setFocusGap] = useState<string | null>(null);
-  const [selected, setSelected] = useState<number | null>(null);
+  const [focusConcept, setFocusConcept] = useState<number | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -45,7 +53,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const onHash = () => setView(viewFromHash());
+    const onHash = () => setRoute(parseHash());
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
@@ -64,20 +72,19 @@ export default function App() {
   }, [openGap, lbOpen]);
 
   const gaps = useMemo(() => (data ? buildGapViews(data) : []), [data]);
-  const positions = useMemo(() => (data ? layout(data) : new Map()), [data]);
   const fieldById = useMemo(() => new Map((data?.fields ?? []).map((f) => [f.id, f])), [data]);
 
-  const go = useCallback((v: View) => {
-    if (window.location.hash !== `#${v}`) window.location.hash = v;
-    setView(v);
+  const go = useCallback((v: View, field: string | null = null) => {
+    const hash = field ? `#${v}/${encodeURIComponent(field)}` : `#${v}`;
+    if (window.location.hash !== hash) window.location.hash = hash;
+    setRoute({ view: v, field });
   }, []);
 
-  const showInGalaxy = useCallback(
+  const showOnMap = useCallback(
     (g: GapView) => {
       setOpenGap(null);
-      setFocusGap(g.key);
-      setSelected(null);
-      go("galaxy");
+      setFocusConcept(g.a);
+      go("explore", g.ca.field);
     },
     [go],
   );
@@ -85,10 +92,9 @@ export default function App() {
   return (
     <div className={`app ${lbOpen ? "lb-open" : ""}`}>
       <header className="topbar">
-        <a className="brand" href="#galaxy" onClick={() => setView("galaxy")} aria-label="FRONTIER home">
-          <span className="brand-mark" aria-hidden="true" />
-          <span className="brand-name">FRONTIER</span>
-          <span className="brand-tag">research gap forecasts</span>
+        <a className="brand" href="#explore" onClick={() => go("explore")} aria-label="FRONTIER home">
+          <LogoMark />
+          <Wordmark />
         </a>
         <nav className="tabs" aria-label="Sections">
           {VIEWS.map((v) => (
@@ -97,7 +103,11 @@ export default function App() {
               href={`#${v.id}`}
               className={`tab ${view === v.id ? "active" : ""}`}
               aria-current={view === v.id ? "page" : undefined}
-              onClick={() => setView(v.id)}
+              onClick={(e) => {
+                e.preventDefault();
+                if (v.id === "explore") setFocusConcept(null);
+                go(v.id);
+              }}
             >
               {v.label}
             </a>
@@ -140,16 +150,17 @@ export default function App() {
             <p>Loading the research galaxy…</p>
           </div>
         )}
-        {data && view === "galaxy" && (
-          <GalaxyView
+        {data && view === "explore" && (
+          <Explore
             data={data}
             gaps={gaps}
-            positions={positions}
             fieldById={fieldById}
-            selected={selected}
-            onSelect={setSelected}
-            focusGap={focusGap}
-            onFocusGap={setFocusGap}
+            field={route.field}
+            focusConcept={focusConcept}
+            onField={(f) => {
+              setFocusConcept(null);
+              go("explore", f);
+            }}
             onOpenGap={setOpenGap}
           />
         )}
@@ -174,11 +185,11 @@ export default function App() {
         fieldById={fieldById}
         horizon={data?.meta.horizon ?? ""}
         onOpenGap={setOpenGap}
-        activeKey={openGap?.key ?? focusGap}
+        activeKey={openGap?.key ?? null}
       />
 
       {openGap && data && (
-        <GapModal gap={openGap} fieldById={fieldById} meta={data.meta} onClose={() => setOpenGap(null)} onShow={showInGalaxy} />
+        <GapModal gap={openGap} fieldById={fieldById} meta={data.meta} onClose={() => setOpenGap(null)} onShow={showOnMap} />
       )}
     </div>
   );

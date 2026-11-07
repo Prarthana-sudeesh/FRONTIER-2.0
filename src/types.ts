@@ -12,6 +12,8 @@ export interface Concept {
   field: FieldId;
   first_year: number;
   papers: number;
+  /** Sub-category, e.g. an arXiv category. Each one becomes an island. */
+  sub?: string;
 }
 
 export interface Gap {
@@ -68,3 +70,13 @@ export interface GapView extends Gap {
 }
 
 export type Vec3 = [number, number, number];
+
+/** One island: a sub-category of a field with its concepts and gaps. */
+export interface Sub {
+  id: string;
+  name: string;
+  field: FieldId;
+  concepts: Concept[];
+  gaps: GapView[];
+  seed: number;
+}

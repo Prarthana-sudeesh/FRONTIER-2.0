@@ -36,595 +36,680 @@
    "name": "single-cell rna sequencing",
    "field": "medicine",
    "first_year": 2005,
-   "papers": 847
+   "papers": 847,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 1,
    "name": "spatial transcriptomics",
    "field": "medicine",
    "first_year": 1996,
-   "papers": 65
+   "papers": 65,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 2,
    "name": "tumour microenvironment",
    "field": "medicine",
    "first_year": 2006,
-   "papers": 1113
+   "papers": 1113,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 3,
    "name": "gut microbiome",
    "field": "medicine",
    "first_year": 2001,
-   "papers": 76
+   "papers": 76,
+   "sub": "Microbes & Infection"
   },
   {
    "id": 4,
    "name": "sepsis",
    "field": "medicine",
    "first_year": 1997,
-   "papers": 110
+   "papers": 110,
+   "sub": "Microbes & Infection"
   },
   {
    "id": 5,
    "name": "organoid",
    "field": "medicine",
    "first_year": 1996,
-   "papers": 481
+   "papers": 481,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 6,
    "name": "crispr screening",
    "field": "medicine",
    "first_year": 2002,
-   "papers": 438
+   "papers": 438,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 7,
    "name": "antimicrobial resistance",
    "field": "medicine",
    "first_year": 1996,
-   "papers": 329
+   "papers": 329,
+   "sub": "Microbes & Infection"
   },
   {
    "id": 8,
    "name": "car-t therapy",
    "field": "medicine",
    "first_year": 2002,
-   "papers": 185
+   "papers": 185,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 9,
    "name": "polygenic risk score",
    "field": "medicine",
    "first_year": 1998,
-   "papers": 346
+   "papers": 346,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 10,
    "name": "digital pathology",
    "field": "medicine",
    "first_year": 2016,
-   "papers": 83
+   "papers": 83,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 11,
    "name": "wearable ecg",
    "field": "medicine",
    "first_year": 2015,
-   "papers": 158
+   "papers": 158,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 12,
    "name": "alzheimer biomarker",
    "field": "medicine",
    "first_year": 2017,
-   "papers": 65
+   "papers": 65,
+   "sub": "Brain, Sleep & Metabolism"
   },
   {
    "id": 13,
    "name": "mrna vaccine",
    "field": "medicine",
    "first_year": 2008,
-   "papers": 602
+   "papers": 602,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 14,
    "name": "epigenetic clock",
    "field": "medicine",
    "first_year": 2009,
-   "papers": 203
+   "papers": 203,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 15,
    "name": "circadian rhythm",
    "field": "medicine",
    "first_year": 2000,
-   "papers": 406
+   "papers": 406,
+   "sub": "Brain, Sleep & Metabolism"
   },
   {
    "id": 16,
    "name": "drug repurposing",
    "field": "medicine",
    "first_year": 2013,
-   "papers": 146
+   "papers": 146,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 17,
    "name": "clinical trial emulation",
    "field": "medicine",
    "first_year": 2005,
-   "papers": 444
+   "papers": 444,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 18,
    "name": "electronic health record",
    "field": "medicine",
    "first_year": 1997,
-   "papers": 98
+   "papers": 98,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 19,
    "name": "retinal imaging",
    "field": "medicine",
    "first_year": 2019,
-   "papers": 11
+   "papers": 11,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 20,
    "name": "cell-free dna",
    "field": "medicine",
    "first_year": 1997,
-   "papers": 703
+   "papers": 703,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 21,
    "name": "phage therapy",
    "field": "medicine",
    "first_year": 2021,
-   "papers": 105
+   "papers": 105,
+   "sub": "Microbes & Infection"
   },
   {
    "id": 22,
    "name": "glioblastoma",
    "field": "medicine",
    "first_year": 2014,
-   "papers": 263
+   "papers": 263,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 23,
    "name": "long covid",
    "field": "medicine",
    "first_year": 1997,
-   "papers": 240
+   "papers": 240,
+   "sub": "Microbes & Infection"
   },
   {
    "id": 24,
    "name": "insulin resistance",
    "field": "medicine",
    "first_year": 1996,
-   "papers": 453
+   "papers": 453,
+   "sub": "Brain, Sleep & Metabolism"
   },
   {
    "id": 25,
    "name": "immune checkpoint",
    "field": "medicine",
    "first_year": 2013,
-   "papers": 157
+   "papers": 157,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 26,
    "name": "synthetic lethality",
    "field": "medicine",
    "first_year": 2016,
-   "papers": 152
+   "papers": 152,
+   "sub": "Oncology & Immunology"
   },
   {
    "id": 27,
    "name": "base editing",
    "field": "medicine",
    "first_year": 2010,
-   "papers": 126
+   "papers": 126,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 28,
    "name": "sleep eeg",
    "field": "medicine",
    "first_year": 2007,
-   "papers": 970
+   "papers": 970,
+   "sub": "Brain, Sleep & Metabolism"
   },
   {
    "id": 29,
    "name": "gene regulatory network",
    "field": "medicine",
    "first_year": 2000,
-   "papers": 227
+   "papers": 227,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 30,
    "name": "pharmacokinetic model",
    "field": "medicine",
    "first_year": 1999,
-   "papers": 150
+   "papers": 150,
+   "sub": "Clinical & Digital Health"
   },
   {
    "id": 31,
    "name": "protein structure prediction",
    "field": "medicine",
    "first_year": 2006,
-   "papers": 426
+   "papers": 426,
+   "sub": "Genomics & Gene Editing"
   },
   {
    "id": 32,
    "name": "optimal execution",
    "field": "quant",
    "first_year": 2002,
-   "papers": 140
+   "papers": 140,
+   "sub": "Market Microstructure"
   },
   {
    "id": 33,
    "name": "limit order book",
    "field": "quant",
    "first_year": 2002,
-   "papers": 505
+   "papers": 505,
+   "sub": "Market Microstructure"
   },
   {
    "id": 34,
    "name": "market impact",
    "field": "quant",
    "first_year": 2004,
-   "papers": 72
+   "papers": 72,
+   "sub": "Market Microstructure"
   },
   {
    "id": 35,
    "name": "volatility surface",
    "field": "quant",
    "first_year": 2006,
-   "papers": 346
+   "papers": 346,
+   "sub": "Volatility & Derivatives"
   },
   {
    "id": 36,
    "name": "rough volatility",
    "field": "quant",
    "first_year": 1999,
-   "papers": 496
+   "papers": 496,
+   "sub": "Volatility & Derivatives"
   },
   {
    "id": 37,
    "name": "statistical arbitrage",
    "field": "quant",
    "first_year": 2014,
-   "papers": 678
+   "papers": 678,
+   "sub": "Signals & Alternative Data"
   },
   {
    "id": 38,
    "name": "factor model",
    "field": "quant",
    "first_year": 2009,
-   "papers": 205
+   "papers": 205,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 39,
    "name": "risk parity",
    "field": "quant",
    "first_year": 1998,
-   "papers": 257
+   "papers": 257,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 40,
    "name": "portfolio optimisation",
    "field": "quant",
    "first_year": 2001,
-   "papers": 116
+   "papers": 116,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 41,
    "name": "deep hedging",
    "field": "quant",
    "first_year": 2000,
-   "papers": 59
+   "papers": 59,
+   "sub": "Volatility & Derivatives"
   },
   {
    "id": 42,
    "name": "regime switching",
    "field": "quant",
    "first_year": 1998,
-   "papers": 102
+   "papers": 102,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 43,
    "name": "mean-field game",
    "field": "quant",
    "first_year": 1995,
-   "papers": 117
+   "papers": 117,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 44,
    "name": "high-frequency trading",
    "field": "quant",
    "first_year": 2007,
-   "papers": 130
+   "papers": 130,
+   "sub": "Market Microstructure"
   },
   {
    "id": 45,
    "name": "credit default swap",
    "field": "quant",
    "first_year": 2006,
-   "papers": 365
+   "papers": 365,
+   "sub": "Volatility & Derivatives"
   },
   {
    "id": 46,
    "name": "systemic risk",
    "field": "quant",
    "first_year": 1998,
-   "papers": 244
+   "papers": 244,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 47,
    "name": "liquidity risk",
    "field": "quant",
    "first_year": 1997,
-   "papers": 551
+   "papers": 551,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 48,
    "name": "alternative data",
    "field": "quant",
    "first_year": 2017,
-   "papers": 1183
+   "papers": 1183,
+   "sub": "Signals & Alternative Data"
   },
   {
    "id": 49,
    "name": "news sentiment signal",
    "field": "quant",
    "first_year": 1999,
-   "papers": 477
+   "papers": 477,
+   "sub": "Signals & Alternative Data"
   },
   {
    "id": 50,
    "name": "cryptocurrency market",
    "field": "quant",
    "first_year": 2015,
-   "papers": 1713
+   "papers": 1713,
+   "sub": "Market Microstructure"
   },
   {
    "id": 51,
    "name": "implied volatility",
    "field": "quant",
    "first_year": 2003,
-   "papers": 368
+   "papers": 368,
+   "sub": "Volatility & Derivatives"
   },
   {
    "id": 52,
    "name": "kelly criterion",
    "field": "quant",
    "first_year": 2006,
-   "papers": 664
+   "papers": 664,
+   "sub": "Portfolio & Risk"
   },
   {
    "id": 53,
    "name": "transaction cost",
    "field": "quant",
    "first_year": 2019,
-   "papers": 273
+   "papers": 273,
+   "sub": "Market Microstructure"
   },
   {
    "id": 54,
    "name": "momentum factor",
    "field": "quant",
    "first_year": 2014,
-   "papers": 1789
+   "papers": 1789,
+   "sub": "Signals & Alternative Data"
   },
   {
    "id": 55,
    "name": "esg score",
    "field": "quant",
    "first_year": 2002,
-   "papers": 108
+   "papers": 108,
+   "sub": "Signals & Alternative Data"
   },
   {
    "id": 56,
    "name": "central bank communication",
    "field": "quant",
    "first_year": 2018,
-   "papers": 170
+   "papers": 170,
+   "sub": "Signals & Alternative Data"
   },
   {
    "id": 57,
    "name": "transformer",
    "field": "ml",
    "first_year": 2017,
-   "papers": 346
+   "papers": 346,
+   "sub": "Generative Models"
   },
   {
    "id": 58,
    "name": "graph neural network",
    "field": "ml",
    "first_year": 2020,
-   "papers": 817
+   "papers": 817,
+   "sub": "Learning Systems"
   },
   {
    "id": 59,
    "name": "diffusion model",
    "field": "ml",
    "first_year": 2002,
-   "papers": 84
+   "papers": 84,
+   "sub": "Generative Models"
   },
   {
    "id": 60,
    "name": "causal inference",
    "field": "ml",
    "first_year": 2005,
-   "papers": 80
+   "papers": 80,
+   "sub": "Probabilistic & Causal"
   },
   {
    "id": 61,
    "name": "reinforcement learning",
    "field": "ml",
    "first_year": 2014,
-   "papers": 742
+   "papers": 742,
+   "sub": "Learning Systems"
   },
   {
    "id": 62,
    "name": "conformal prediction",
    "field": "ml",
    "first_year": 2015,
-   "papers": 137
+   "papers": 137,
+   "sub": "Probabilistic & Causal"
   },
   {
    "id": 63,
    "name": "contrastive learning",
    "field": "ml",
    "first_year": 2021,
-   "papers": 4222
+   "papers": 4222,
+   "sub": "Generative Models"
   },
   {
    "id": 64,
    "name": "large language model",
    "field": "ml",
    "first_year": 2020,
-   "papers": 406
+   "papers": 406,
+   "sub": "Generative Models"
   },
   {
    "id": 65,
    "name": "gaussian process",
    "field": "ml",
    "first_year": 2000,
-   "papers": 204
+   "papers": 204,
+   "sub": "Probabilistic & Causal"
   },
   {
    "id": 66,
    "name": "optimal transport",
    "field": "ml",
    "first_year": 1997,
-   "papers": 206
+   "papers": 206,
+   "sub": "Geometry & Topology"
   },
   {
    "id": 67,
    "name": "neural ode",
    "field": "ml",
    "first_year": 1997,
-   "papers": 410
+   "papers": 410,
+   "sub": "Learning Systems"
   },
   {
    "id": 68,
    "name": "signature method",
    "field": "ml",
    "first_year": 1999,
-   "papers": 231
+   "papers": 231,
+   "sub": "Geometry & Topology"
   },
   {
    "id": 69,
    "name": "topological data analysis",
    "field": "ml",
    "first_year": 2014,
-   "papers": 392
+   "papers": 392,
+   "sub": "Geometry & Topology"
   },
   {
    "id": 70,
    "name": "normalizing flow",
    "field": "ml",
    "first_year": 2012,
-   "papers": 291
+   "papers": 291,
+   "sub": "Generative Models"
   },
   {
    "id": 71,
    "name": "federated learning",
    "field": "ml",
    "first_year": 2020,
-   "papers": 501
+   "papers": 501,
+   "sub": "Learning Systems"
   },
   {
    "id": 72,
    "name": "survival analysis",
    "field": "ml",
    "first_year": 2008,
-   "papers": 111
+   "papers": 111,
+   "sub": "Probabilistic & Causal"
   },
   {
    "id": 73,
    "name": "bayesian optimisation",
    "field": "ml",
    "first_year": 2019,
-   "papers": 323
+   "papers": 323,
+   "sub": "Probabilistic & Causal"
   },
   {
    "id": 74,
    "name": "anomaly detection",
    "field": "ml",
    "first_year": 2008,
-   "papers": 1049
+   "papers": 1049,
+   "sub": "Probabilistic & Causal"
   },
   {
    "id": 75,
    "name": "random matrix theory",
    "field": "physics",
    "first_year": 2011,
-   "papers": 60
+   "papers": 60,
+   "sub": "Statistical Physics"
   },
   {
    "id": 76,
    "name": "percolation",
    "field": "physics",
    "first_year": 2011,
-   "papers": 138
+   "papers": 138,
+   "sub": "Complex Systems"
   },
   {
    "id": 77,
    "name": "stochastic thermodynamics",
    "field": "physics",
    "first_year": 2011,
-   "papers": 71
+   "papers": 71,
+   "sub": "Statistical Physics"
   },
   {
    "id": 78,
    "name": "kuramoto model",
    "field": "physics",
    "first_year": 2000,
-   "papers": 571
+   "papers": 571,
+   "sub": "Complex Systems"
   },
   {
    "id": 79,
    "name": "spin glass",
    "field": "physics",
    "first_year": 1999,
-   "papers": 103
+   "papers": 103,
+   "sub": "Statistical Physics"
   },
   {
    "id": 80,
    "name": "hawkes process",
    "field": "physics",
    "first_year": 2018,
-   "papers": 492
+   "papers": 492,
+   "sub": "Complex Systems"
   },
   {
    "id": 81,
    "name": "renormalization group",
    "field": "physics",
    "first_year": 2010,
-   "papers": 441
+   "papers": 441,
+   "sub": "Statistical Physics"
   },
   {
    "id": 82,
    "name": "active matter",
    "field": "physics",
    "first_year": 2012,
-   "papers": 250
+   "papers": 250,
+   "sub": "Complex Systems"
   },
   {
    "id": 83,
    "name": "entropy production",
    "field": "physics",
    "first_year": 1997,
-   "papers": 215
+   "papers": 215,
+   "sub": "Statistical Physics"
   },
   {
    "id": 84,
    "name": "agent-based model",
    "field": "physics",
    "first_year": 2011,
-   "papers": 331
+   "papers": 331,
+   "sub": "Complex Systems"
   }
  ],
  "gaps": [

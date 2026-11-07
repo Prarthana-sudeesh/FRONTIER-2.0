@@ -102,7 +102,7 @@ export default function GapModal({ gap, fieldById, meta, onClose, onShow }: Prop
             {copied ? "Copied" : "Copy summary"}
           </button>
           <button className="btn primary" onClick={() => onShow(gap)}>
-            Show in galaxy
+            Show on the map
           </button>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { pct } from "../data";
 import type { Dataset } from "../types";
 
 const SERIES = [
-  { key: "model", label: "FRONTIER model", color: "#5cc8ff" },
+  { key: "model", label: "FRONTIER model", color: "#b18cff" },
   { key: "popularity", label: "Popular × popular", color: "#ffc04d" },
   { key: "random", label: "Random pairs", color: "#8a8fa8" },
 ] as const;
