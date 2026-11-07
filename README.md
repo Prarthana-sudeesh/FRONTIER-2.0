@@ -37,6 +37,8 @@ python pipeline/frontier_model.py --concepts data/paper_concepts.parquet --out f
 Copy the resulting `forecasts.json` into `public/data/` here and redeploy.
 
 ## Deploy
+Step-by-step guide for anyone, including without GitHub Actions: **[DEPLOY.md](DEPLOY.md)**.
+
 The build is static with relative paths, so `dist/` works on any host.
 - **GitHub Pages**: Settings → Pages → Source: *GitHub Actions*. The `Deploy website`
   workflow publishes on every push to `main`.
